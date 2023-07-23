@@ -26,7 +26,7 @@ export default defineConfig({
         Login: resolve(root ,'Login' ,'index.html'),
         ProblemFolders: resolve(root,  'ProblemFolders' ,'index.html'),
         Problems: resolve(root,  'Problems' ,'index.html'),
-        StartCompetiton: resolve(root,  'StartCompetiton' ,'index.html'),
+        StartCompetiton: resolve(root,  'StartCompetition' ,'index.html'),
         ViewProblem: resolve(root,  'ViewProblem' ,'index.html'),
         CompletedProblems: resolve(root,  'CompletedProblems' ,'index.html'),
       }

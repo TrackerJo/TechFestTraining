@@ -28,7 +28,7 @@ function Problems() {
       }, []);
 
     function backToFolders(e){
-        window.location.href = '/ProblemFolders/'
+        window.location.href = '/TechFestTraining/ProblemFolders/'
     }
     return (
         <div className="ProblemList">

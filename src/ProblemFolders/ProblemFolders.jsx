@@ -26,7 +26,7 @@ function ProblemFolders() {
     //setFolders(problemFolders)
     
       function backToHome(e){
-        window.location.href = '/'
+        window.location.href = '/TechFestTraining/'
       }
 
     return (

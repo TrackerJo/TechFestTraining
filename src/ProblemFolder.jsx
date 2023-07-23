@@ -5,7 +5,7 @@ import './ProblemFolder.css'
 function ProblemFolder({folder}) {
     
     function openFolder(e){
-        window.location.href = '/Problems/?folderName=' + folder.id
+        window.location.href = '/TechFestTraining/Problems/?folderName=' + folder.id
     }
 
     return (

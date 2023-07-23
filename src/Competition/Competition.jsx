@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './Competition.css'
 import { useState, useEffect } from 'react'
-import { getCompStatus } from './firebase.js'
+import { getCompStatus } from '../firebase.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

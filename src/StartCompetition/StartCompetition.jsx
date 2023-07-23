@@ -4,9 +4,9 @@ import './StartCompetition.css'
 import ParticipantLabel from './participantLabel.jsx'
 import SettingComp from './SettingsCompetition.jsx'
 import { useState, useEffect } from 'react'
-import { getParticipants, changeCompSettings } from './firebase.js'
-import { useForcedReload } from './useForcedReload'
-import { useParticipants } from './useParticipants'
+import { getParticipants, changeCompSettings } from '../firebase.js'
+
+import { useParticipants } from '../useParticipants'
 
 const Counter = () => {
   const [count, setCount] = useState(0)

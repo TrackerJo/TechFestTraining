@@ -37,7 +37,7 @@ function Problems() {
       }, []);
 
     function backToHome(e){
-        window.location.href = '/'
+        window.location.href = '/TechFestTraining/'
     }
     return (
         <div className="ProblemList">

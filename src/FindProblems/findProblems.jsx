@@ -57,7 +57,7 @@ function ProblemSearch() {
     }
 
     function backToHome(e){
-        window.location.href = '/'
+        window.location.href = '/TechFestTraining/'
       }
 
 

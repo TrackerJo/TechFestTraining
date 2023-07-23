@@ -304,8 +304,8 @@ onAuthStateChanged(auth, user => {
         console.log('user logged in: ', user);
         user = user;
         //Check if on login page
-        if(window.location.href.includes("login.html") && !loggingIn){
-            window.location.href = ""
+        if(window.location.href.includes("Login") && !loggingIn){
+            window.location.href = "/TechFestTraining/"
         }
         loggedIn = 1;
        
@@ -315,8 +315,8 @@ onAuthStateChanged(auth, user => {
     } else {
         console.log('user logged out');
         //Redirect to login page
-        if(!window.location.href.includes("login") && !window.location.href.includes("friendLink")){
-            window.location.href = getBase() + "login/"
+        if(!window.location.href.includes("Login") && !window.location.href.includes("friendLink")){
+            window.location.href = "/TechFestTraining/Login/"
         }
         loggedIn = 0;
     }

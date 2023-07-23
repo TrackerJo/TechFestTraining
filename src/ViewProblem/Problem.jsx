@@ -110,7 +110,7 @@ function Problem() {
     }
 
     function backToProblems(e){
-        window.location.href = "/Problems/?folderName=" + folderID
+        window.location.href = "/TechFestTraining/Problems/?folderName=" + folderID
     }
 
     function viewSolution(e){

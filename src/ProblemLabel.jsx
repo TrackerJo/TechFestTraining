@@ -5,7 +5,7 @@ import './ProblemLabel.css'
 function ProblemLabel({problem, folderName}) {
     
     function viewProblem(e){
-        window.location.href = '/ViewProblem/?folderName=' + folderName + '&problem=' + problem.id
+        window.location.href = '/TechFestTraining/ViewProblem/?folderName=' + folderName + '&problem=' + problem.id
     }
 
     return (

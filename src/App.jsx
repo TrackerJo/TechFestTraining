@@ -7,11 +7,11 @@ function App() {
   const [count, setCount] = useState(0)
 
   function redirectToPFoldersList(e){
-    window.location.href = '/ProblemFolders/'
+    window.location.href = '/TechFestTraining/ProblemFolders/'
   }
 
   function redirectToFindProblem(e){
-    window.location.href = '/FindProblems/'
+    window.location.href = '/TechFestTraining/FindProblems/'
   }
 
   async function createCompetition(e){
@@ -25,11 +25,11 @@ function App() {
     competitionCode = compString.substring(0, 6)
     await createMiniCompetition(competitionCode)
     
-    window.location.href = '/startCompetition.html?compCode=' + competitionCode
+    window.location.href = '/TechFestTraining/startCompetition.html?compCode=' + competitionCode
   }
 
   function redirectToCompletedProblems(e){
-    window.location.href = '/CompletedProblems/'
+    window.location.href = '/TechFestTraining/CompletedProblems/'
   }
   
   function handleLogout(e){
