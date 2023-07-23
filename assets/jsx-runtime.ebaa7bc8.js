@@ -3045,7 +3045,7 @@ This typically indicates that your device does not have a healthy Internet conne
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */const U2=5*60,b2=m0("authIdTokenMaxAge")||U2;let Qg=null;const V2=t=>async e=>{const n=e&&await e.getIdTokenResult(),r=n&&(new Date().getTime()-Date.parse(n.issuedAtTime))/1e3;if(r&&r>b2)return;const i=n==null?void 0:n.token;Qg!==i&&(Qg=i,await fetch(t,{method:i?"POST":"DELETE",headers:i?{Authorization:`Bearer ${i}`}:{}}))};function bo(t=Yd()){const e=Kl(t,"auth");if(e.isInitialized())return e.getImmediate();const n=lR(t,{popupRedirectResolver:L2,persistence:[qR,xR,op]}),r=m0("authTokenSyncURL");if(r){const s=V2(r);AR(n,s,()=>s(n.currentUser)),CR(n,o=>s(o))}const i=d0("auth");return i&&cR(n,`http://${i}`),n}F2("Browser");function z2(){return"/"}/**
+ */const U2=5*60,b2=m0("authIdTokenMaxAge")||U2;let Qg=null;const V2=t=>async e=>{const n=e&&await e.getIdTokenResult(),r=n&&(new Date().getTime()-Date.parse(n.issuedAtTime))/1e3;if(r&&r>b2)return;const i=n==null?void 0:n.token;Qg!==i&&(Qg=i,await fetch(t,{method:i?"POST":"DELETE",headers:i?{Authorization:`Bearer ${i}`}:{}}))};function bo(t=Yd()){const e=Kl(t,"auth");if(e.isInitialized())return e.getImmediate();const n=lR(t,{popupRedirectResolver:L2,persistence:[qR,xR,op]}),r=m0("authTokenSyncURL");if(r){const s=V2(r);AR(n,s,()=>s(n.currentUser)),CR(n,o=>s(o))}const i=d0("auth");return i&&cR(n,`http://${i}`),n}F2("Browser");function z2(){return"/TechFestTraining/"}/**
  * @license
  * Copyright 2017 Google LLC
  *
