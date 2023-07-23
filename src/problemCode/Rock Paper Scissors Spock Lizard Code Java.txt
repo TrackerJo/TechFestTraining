@@ -1,0 +1,66 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class RPSSL {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner input = new Scanner(new File("ContestFiles2022/Inputs/Input-11.txt"));
+        PrintWriter output = new PrintWriter(new File("ContestFiles2022/Outputs/11-Concordia.txt"));
+       
+         
+        while(input.hasNextLine()){
+            String line = input.nextLine();
+            String[] arr = line.split(", ");
+            String p1 = arr[0];
+            String p2 = arr[1];
+            if(p1.equals("Rock") && p2.equals("Scissors")){
+                output.println("One");
+            }else if(p1.equals("Rock") && p2.equals("Lizard")){
+                output.println("One");
+            }else if(p1.equals("Scissors") && p2.equals("Paper")){
+                output.println("One");
+            }else if(p1.equals("Scissors") && p2.equals("Lizard")){
+                output.println("One");
+            }else if(p1.equals("Paper") && p2.equals("Rock")){
+                output.println("One");
+            }else if(p1.equals("Paper") && p2.equals("Spock")){
+                output.println("One");
+            }else if(p1.equals("Spock") && p2.equals("Rock")){
+                output.println("One");
+            }else if(p1.equals("Spock") && p2.equals("Scissors")){
+                output.println("One");
+            }else if(p1.equals("Lizard") && p2.equals("Paper")){
+                output.println("One");
+            }else if(p1.equals("Lizard") && p2.equals("Spock")){
+                output.println("One");
+            }else if(p2.equals("Rock") && p1.equals("Scissors")){
+                output.println("Two");
+            }else if(p2.equals("Rock") && p1.equals("Lizard")){
+                output.println("Two");
+            }else if(p2.equals("Scissors") && p1.equals("Paper")){
+                output.println("Two");
+            }else if(p2.equals("Scissors") && p1.equals("Lizard")){
+                output.println("Two");
+            }else if(p2.equals("Paper") && p1.equals("Rock")){
+                output.println("Two");
+            }else if(p2.equals("Paper") && p1.equals("Spock")){
+                output.println("Two");
+            }else if(p2.equals("Spock") && p1.equals("Rock")){
+                output.println("Two");
+            }else if(p2.equals("Spock") && p1.equals("Scissors")){
+                output.println("Two");
+            }else if(p2.equals("Lizard") && p1.equals("Paper")){
+                output.println("Two");
+            }
+            else if(p2.equals("Lizard") && p1.equals("Spock")){
+                output.println("Two");
+            }else{
+                output.println("Tie");
+            }
+
+        }
+        output.close();
+        input.close();
+    }
+}

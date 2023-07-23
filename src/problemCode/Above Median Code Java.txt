@@ -1,0 +1,50 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class AboveMedian {
+    public static void main(String[] args) throws FileNotFoundException {
+        //Read Input
+        Scanner input = new Scanner(new File("Above Median Input"));
+        //Create Output file
+        PrintWriter output = new PrintWriter(new File("Above Median Output"));
+        //Create array list 
+        while (input.hasNextLine()) {
+            //Add next line to array, to read each number
+            String line = input.nextLine();
+            String[] numbers = line.split(",");
+            int[] intNumbers = new int[numbers.length];
+            for (int i = 0; i < numbers.length; i++) {
+                intNumbers[i] = Integer.parseInt(numbers[i]);
+            }
+            //Find median
+            int median = 0;
+            int sum = 0;
+            for (int i = 0; i < intNumbers.length; i++) {
+                sum += intNumbers[i];
+            }
+            if (intNumbers.length % 2 == 0) {
+                median = (intNumbers[intNumbers.length / 2] + intNumbers[(intNumbers.length / 2) - 1]) / 2;
+            } else {
+                median = intNumbers[intNumbers.length / 2];
+            }
+            //Find numbers above median
+            String aboveMedian = "";
+            for (int i = 0; i < intNumbers.length; i++) {
+                if (intNumbers[i] > median) {
+                    aboveMedian += intNumbers[i] + ",";
+                }
+            }
+            if (aboveMedian.equals("")) {
+                output.println("None");
+            } else {
+                output.println(aboveMedian.substring(0, aboveMedian.length() - 1));
+            }
+        }
+
+
+        output.close();
+        input.close();
+    }
+}

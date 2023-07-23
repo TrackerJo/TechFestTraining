@@ -1,0 +1,67 @@
+spellcheck is not in the wordlist
+read
+a
+list
+if
+words is not in the wordlist
+and
+indicate
+if
+a
+word
+is
+misspelled is not in the wordlist
+word
+is
+considered
+misspelled is not in the wordlist
+if
+it
+is
+not
+in
+our
+dictionary
+the
+word
+is
+correct
+print
+the
+word
+as
+it
+appears is not in the wordlist
+the
+input
+one
+per
+line
+if
+the
+word
+is
+misspelled is not in the wordlist
+print
+the
+word
+appears is not in the wordlist
+input
+followed is not in the wordlist
+by
+the
+string
+isb is not in the wordlist
+misspelled is not in the wordlist
+the
+output
+should
+beb is not in the wordlist
+inr is not in the wordlist
+the
+same
+order
+as
+the
+input
+list

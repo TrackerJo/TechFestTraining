@@ -1,0 +1,65 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MissingAny {
+    public static void main(String[] args) throws FileNotFoundException {
+       //Get input
+        Scanner input = new Scanner(new File("ContestFiles2022/Inputs/Input-18.txt"));
+        //Create output file
+        PrintWriter output = new PrintWriter(new File("ContestFiles2022/Outputs/18-Concordia.txt"));
+        //Loop through input file
+        while (input.hasNextLine()) {
+            //Get next line
+            String line = input.nextLine();
+            //Split line into array
+            String[] numbersS = line.split(",");
+            //Create string to hold missing numbers that will be printed to output file
+            String missingNumbers = "";
+            //Create array list to hold numbers
+            ArrayList<Integer> numbers = new ArrayList<Integer>();
+            //Add numbers to array list
+            for (int index = 0; index < numbersS.length; index++) {
+                numbers.add(Integer.parseInt(numbersS[index]));
+            }
+            //Get number of numbers to find
+            int numToFind = Integer.parseInt(numbersS[0]);
+            int smallestFound = 0;
+            //Loop through numbers to find
+            while(smallestFound < numToFind){
+                int smallest = 1;
+                boolean found = false;
+                //Loop through numbers to find smallest number
+                while (!found) {
+                    found = true;
+                    //Loop through numbers to find if smallest number is in array list
+                    for (int i = 0; i < numbers.size(); i++) {
+                        if (numbers.get(i) == smallest) {
+                            found = false;
+                            smallest++;
+                        }
+                    }
+                }
+                //Add smallest number to missing numbers string
+                if(missingNumbers == ""){
+                    missingNumbers += (smallest);
+                }else{
+                
+                    missingNumbers += ( "," +smallest);
+                }
+                //Add smallest number to array list
+                numbers.add(smallest);
+                //Increment smallest found
+                smallestFound++;
+            }
+
+            output.println(missingNumbers);
+            
+        }
+        output.close();
+        input.close();
+        
+    }
+}

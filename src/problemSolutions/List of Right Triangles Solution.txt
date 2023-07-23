@@ -1,0 +1,183 @@
+1 has no right triangles.
+2 has no right triangles.
+3 has no right triangles.
+4 has no right triangles.
+5-4-3
+6 has no right triangles.
+7 has no right triangles.
+8 has no right triangles.
+9 has no right triangles.
+10-8-6
+11 has no right triangles.
+12 has no right triangles.
+13-12-5
+14 has no right triangles.
+15-12-9
+16 has no right triangles.
+17-15-8
+18 has no right triangles.
+19 has no right triangles.
+20-16-12
+21 has no right triangles.
+22 has no right triangles.
+23 has no right triangles.
+24 has no right triangles.
+25-20-15
+25-24-7
+26-24-10
+27 has no right triangles.
+28 has no right triangles.
+29-21-20
+30-24-18
+31 has no right triangles.
+32 has no right triangles.
+33 has no right triangles.
+34-30-16
+35-28-21
+36 has no right triangles.
+37-35-12
+38 has no right triangles.
+39-36-15
+40-32-24
+41-40-9
+42 has no right triangles.
+43 has no right triangles.
+44 has no right triangles.
+45-36-27
+46 has no right triangles.
+47 has no right triangles.
+48 has no right triangles.
+49 has no right triangles.
+50-40-30
+50-48-14
+51-45-24
+52-48-20
+53-45-28
+54 has no right triangles.
+55-44-33
+56 has no right triangles.
+57 has no right triangles.
+58-42-40
+59 has no right triangles.
+60-48-36
+61-60-11
+62 has no right triangles.
+63 has no right triangles.
+64 has no right triangles.
+65-52-39
+65-56-33
+65-60-25
+65-63-16
+66 has no right triangles.
+67 has no right triangles.
+68-60-32
+69 has no right triangles.
+70-56-42
+71 has no right triangles.
+72 has no right triangles.
+73-55-48
+74-70-24
+75-60-45
+75-72-21
+76 has no right triangles.
+77 has no right triangles.
+78-72-30
+79 has no right triangles.
+80-64-48
+81 has no right triangles.
+82-80-18
+83 has no right triangles.
+84 has no right triangles.
+85-68-51
+85-75-40
+85-77-36
+85-84-13
+86 has no right triangles.
+87-63-60
+88 has no right triangles.
+89-80-39
+90-72-54
+91-84-35
+92 has no right triangles.
+93 has no right triangles.
+94 has no right triangles.
+95-76-57
+96 has no right triangles.
+97-72-65
+98 has no right triangles.
+99 has no right triangles.
+100-80-60
+100-96-28
+101-99-20
+102-90-48
+103 has no right triangles.
+104-96-40
+105-84-63
+106-90-56
+107 has no right triangles.
+108 has no right triangles.
+109-91-60
+110-88-66
+111-105-36
+112 has no right triangles.
+113-112-15
+114 has no right triangles.
+115-92-69
+116-84-80
+117-108-45
+118 has no right triangles.
+119-105-56
+120-96-72
+121 has no right triangles.
+122-120-22
+123-120-27
+124 has no right triangles.
+125-100-75
+125-117-44
+125-120-35
+126 has no right triangles.
+127 has no right triangles.
+128 has no right triangles.
+129 has no right triangles.
+130-104-78
+130-112-66
+130-120-50
+130-126-32
+131 has no right triangles.
+132 has no right triangles.
+133 has no right triangles.
+134 has no right triangles.
+135-108-81
+136-120-64
+137-105-88
+138 has no right triangles.
+139 has no right triangles.
+140-112-84
+141 has no right triangles.
+142 has no right triangles.
+143-132-55
+144 has no right triangles.
+145-105-100
+145-116-87
+145-143-24
+145-144-17
+146-110-96
+147 has no right triangles.
+148-140-48
+149-140-51
+150-120-90
+150-144-42
+1000-800-600
+1000-936-352
+1000-960-280
+1001-924-385
+5000-4000-3000
+5000-4216-2688
+5000-4680-1760
+5000-4800-1400
+5001 has no right triangles.
+9999-9801-1980
+10001-7535-6576
+10001-7665-6424
+10001-9880-1551
+10001-9999-200

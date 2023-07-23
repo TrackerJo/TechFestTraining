@@ -1,0 +1,13 @@
+const fs = require('fs')
+//Read Input File
+const data = fs.readFileSync('./ContestFiles2022/Inputs/Input-01.txt', 'utf8')
+//Create Output String
+let output = ''
+//Get number of times to print hello
+let numToPrint = parseInt(data)
+//Loop through the number of times to print
+for (let i = 0; i < numToPrint; i++) {
+    output += 'hello\n'
+}
+//Write Output File
+fs.writeFileSync('./ContestFiles2022/Outputs/Output-01.txt', output)

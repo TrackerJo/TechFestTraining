@@ -1,0 +1,28 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class ReadFromDictionary {
+    
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner input = new Scanner(new File("ContestFiles2022/Inputs/Input-02.txt"));
+        Scanner wordlist = new Scanner(new File("ContestFiles2022/Inputs/wordlist.txt"));
+        PrintWriter output = new PrintWriter(new File("ContestFiles2022/Outputs/02-Concordia.txt"));
+        //get first line of input
+        String wordsToPrint = input.nextLine();
+        //Repeat wordsToPrint times
+        for (int i = 0; i < Integer.parseInt(wordsToPrint); i++) {
+            //Get word to print
+            String word = wordlist.nextLine();
+            //Print word
+            output.println(word);
+        }
+
+        output.close();
+        input.close();
+        wordlist.close();
+
+    }
+
+}

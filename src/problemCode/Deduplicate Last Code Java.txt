@@ -1,0 +1,65 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class DeduplicateLast {
+    public static void main(String[] args) throws FileNotFoundException {
+        //Read Inputs
+        Scanner input = new Scanner(new File("Deduplicate Last Input"));
+        //Make file to print output
+        PrintWriter output = new PrintWriter(new File("Deduplicate Last Output"));
+        //Create array to hold input lines
+        ArrayList<String> inputLines = new ArrayList<String>();
+        //Fill Array with input lines
+        while(input.hasNextLine()){
+            String line = input.nextLine();
+            inputLines.add(line);
+        }
+        //Loop through inputLines
+        for(int i = 0; i < inputLines.size(); i++){
+            //Split line into array
+            String[] line = inputLines.get(i).split(", ");
+            //Create new arraylist
+            ArrayList<String> lineList = new ArrayList<String>();
+            //Loop through line
+            for(int j = 0; j < line.length; j++){
+                //Add to lineList
+                lineList.add(line[j]);
+            }
+            //Loop through lineList
+            for(int j = 0; j < lineList.size(); j++){
+                //Loop through lineList
+                for(int k = 0; k < lineList.size(); k++){
+                    //If j and k are not the same
+                    if(j != k){
+                        //If j word and k word are the same
+                        if(lineList.get(j).equals(lineList.get(k))){
+                            //Remove k
+                            lineList.remove(j);
+                        }
+                    }
+                }
+            }
+            //Create new string
+            String newLine = "";
+            //Loop through lineList
+            for(int j = 0; j < lineList.size(); j++){
+                //Add to newLine
+                newLine += lineList.get(j);
+                //If j is not the last index
+                if(j != lineList.size() - 1){
+                    //Add comma and space
+                    newLine += ", ";
+                }
+            }
+            //Print newLine
+            output.println(newLine);
+        }
+        
+        input.close();
+        output.close();
+       
+    }
+}

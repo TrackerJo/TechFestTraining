@@ -1,0 +1,37 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.Spring;
+
+public class OutputSelectedWords {
+    
+    public static void main(String[] args) throws FileNotFoundException {
+        //Create scanners and print writer
+        Scanner input = new Scanner(new File("ContestFiles2022/Inputs/Input-04.txt"));
+        Scanner wordlist = new Scanner(new File("ContestFiles2022/Inputs/wordlist.txt"));
+        PrintWriter output = new PrintWriter(new File("ContestFiles2022/Outputs/04-Concordia.txt"));
+        //Create array list
+        ArrayList<Integer> indexsToPrint = new ArrayList<Integer>();
+        //Store indexes in array list
+        while(input.hasNextLine()) {
+            indexsToPrint.add(Integer.parseInt(input.nextLine()));
+        }
+        //Create words array list
+        ArrayList<String> words = new ArrayList<String>();
+        //Store words in array list
+        while(wordlist.hasNextLine()) {
+            words.add(wordlist.nextLine());
+        }
+        //Print words
+        for (int index : indexsToPrint) {
+            output.println(words.get(index - 1));
+        }
+        output.close();
+        input.close();
+        wordlist.close();
+        
+    }
+}

@@ -1,0 +1,47 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class MissingInteger {
+  
+    public static void main(String[] args) throws FileNotFoundException {
+        //Read from input file
+        Scanner input = new Scanner(new File("ContestFiles2022/Inputs/Input-16.txt"));
+        //Write to concorida output file 
+        PrintWriter output = new PrintWriter(new File("ContestFiles2022/Outputs/16-Concordia.txt"));
+        //Loop through each line
+        while (input.hasNextLine()) {
+            //Read line
+            String line = input.nextLine();
+            //Split line into array of strings
+            String[] numbers = line.split(",");
+            //Create array of ints
+            int[] intNumbers = new int[numbers.length];
+            //Convert strings to ints
+            for (int i = 0; i < numbers.length; i++) {
+                intNumbers[i] = Integer.parseInt(numbers[i]);
+            }
+            //Find smallest number
+            int smallest = 1;
+            boolean found = false;
+            //Loop through numbers to find smallest number
+            while (!found) {
+                found = true;
+                //Loop through numbers to find if smallest number is in array list
+                for (int i = 0; i < intNumbers.length; i++) {
+                    if (intNumbers[i] == smallest) {
+                        found = false;
+                        smallest++;
+                    }
+                }
+            }
+            output.println(smallest);
+           
+        }
+        output.close();
+        input.close();
+    
+        
+    }
+}

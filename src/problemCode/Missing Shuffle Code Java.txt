@@ -1,0 +1,47 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class MissingShuffle {
+    public static void main(String[] args) throws FileNotFoundException, NumberFormatException{
+       //read from input file
+        Scanner input = new Scanner(new File("ContestFiles2022/Inputs/Input-08.txt"));
+        //write to output file
+        PrintWriter output = new PrintWriter(new File("ContestFiles2022/Outputs/08-Concordia.txt"));
+        //loop through each line
+        while(input.hasNextLine()){
+            //read the line
+            String line = input.nextLine();
+            //split the line into an array of strings
+            String[] numbers = line.split(",");
+            String missingNumbers = "";
+            //loop 100 times
+            for(int i = 1; i < 101; i++){
+                boolean found = false;
+                //loop through the array
+                for(int j = 0; j < numbers.length; j++){
+                    //if the number is equal to the index
+                    if(Integer.parseInt(numbers[j]) == i){
+                       //set found to true
+                        found = true;
+                    }
+                }
+                //if the number is not found
+                if(!found){
+                    missingNumbers += i + ", ";
+                }
+            }
+            //if there are no missing numbers
+            if(missingNumbers == ""){
+                output.println("None");
+            }else{
+                //print the missing numbers
+                output.println(missingNumbers.substring(0, missingNumbers.length() - 2));
+            }
+            
+        }
+        output.close();
+        input.close();
+    }
+}

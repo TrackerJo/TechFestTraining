@@ -1,0 +1,46 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ListOfRightTriangles {
+
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner input = new Scanner(new File("ContestFiles2022/Inputs/Input-13.txt"));
+        PrintWriter output = new PrintWriter(new File("ContestFiles2022/Outputs/13-Concordia.txt"));
+        //Create array list
+        ArrayList<Integer> hypotenuse = new ArrayList<Integer>();
+        while(input.hasNextLine()) {
+            String line = input.nextLine();
+            hypotenuse.add(Integer.parseInt(line));
+        }
+        //loop through hypotenuse
+        for (int hyp : hypotenuse) {
+            boolean noRightTriangles = true;
+             //Loop through possible second sides
+             for (int secondSide = 1; secondSide <= hyp; secondSide++) {
+                //Loop through possible third sides
+                for (int thirdSide = 1; thirdSide <= secondSide; thirdSide++) {
+                     //Check if triangle is valid
+                     if (hyp + secondSide > thirdSide && hyp + thirdSide > secondSide && secondSide + thirdSide > hyp) {
+                            //Check if triangle is right
+                            if ((thirdSide*thirdSide + secondSide*secondSide) == (hyp*hyp)) {
+                                //Add triangle to array list
+                                output.println(hyp + "-" + secondSide + "-" + thirdSide);
+                                noRightTriangles = false;
+                            }
+                          
+                     }
+                }
+            }
+            if (noRightTriangles) {
+                output.println(hyp + " has no right triangles.");
+            }
+           
+        }
+        //Close the files
+        output.close();
+        input.close();
+     }
+}

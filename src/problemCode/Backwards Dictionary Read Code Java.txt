@@ -1,0 +1,40 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.Spring;
+
+public class BackwardsDictionaryRead {
+    
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner input = new Scanner(new File("ContestFiles2022/Inputs/Input-03.txt"));
+        Scanner wordlist = new Scanner(new File("ContestFiles2022/Inputs/wordlist.txt"));
+        PrintWriter output = new PrintWriter(new File("ContestFiles2022/Outputs/03-Concordia.txt"));
+        //get first line of input
+        String wordsToPrint = input.nextLine();
+        //Create array list to store words
+        ArrayList<String> words = new ArrayList<String>();
+        //Store words in array list
+        while (wordlist.hasNextLine()) {
+            words.add(wordlist.nextLine());
+        }
+        //Create array list to store printed words
+        ArrayList<String> printedWords = new ArrayList<String>();
+        //Repeat wordsToPrint times
+        for (int i = 0; i < Integer.parseInt(wordsToPrint); i++) {
+            //Get word to print
+            String word = words.get(words.size() - 1 - i);
+            //Print word
+            printedWords.add(word);
+        }
+        //Print words in reverse order
+        for (int i = printedWords.size() - 1; i >= 0; i--) {
+            output.println(printedWords.get(i));
+        }
+        output.close();
+        input.close();
+        wordlist.close();
+    }
+}

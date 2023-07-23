@@ -1,0 +1,55 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MissingNumbers {
+
+     public static void main(String[] args) throws FileNotFoundException {
+        Scanner input = new Scanner(new File("ContestFiles2022/Inputs/Input-08.txt"));
+        PrintWriter output = new PrintWriter(new File("ContestFiles2022/Outputs/08-Concordia.txt"));
+        //Loop through input file
+        while(input.hasNextLine()){
+            String currentLine = input.nextLine();
+            //Get every number in line as strings
+            String[] numbersInLineS = currentLine.split(",");
+            ArrayList<Integer> integersInLine = new ArrayList<Integer>();
+            //Convert strings to integers
+            for (String string : numbersInLineS) {
+                integersInLine.add(Integer.parseInt(string));
+            }
+            //Loop through 100 times to see what numbers are missing
+            boolean missingAny = false;
+            for (int i = 1; i < 101; i++) {
+                if(!integersInLine.contains(i)){
+                    //Check if first number printed
+                    if(!missingAny){
+                    
+                        output.print(i);
+                    
+                    } else {
+                        output.print("," + i);
+                    }
+                    //Set missing a number to true
+                    missingAny = true;
+                }
+            }
+            //Check if not missing any numbers
+            if(!missingAny){
+                output.print("None");
+            }
+            //Print a new line
+            output.println();
+        }
+        
+       
+       
+        
+      
+        //Close the files
+        output.close();
+        input.close();
+        
+     }
+}
