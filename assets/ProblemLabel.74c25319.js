@@ -1,1 +1,0 @@
-import{j as l,F as r,a as n}from"./jsx-runtime.89416b00.js";function s({problem:e,folderName:a}){function i(o){window.location.href="/ViewProblem/?folderName="+a+"&problem="+e.id}return l(r,{children:n("div",{class:"Problem",onClick:i,children:[l("label",{className:"name",children:e.Name}),l("label",{className:"difficulty",children:e.Difficulty})]})})}export{s as P};
