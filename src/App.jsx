@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import { createMiniCompetition, signOutUser } from './firebase.js'
+import {favIcon } from './assets/favicon.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +25,7 @@ function App() {
     let compString = String(competitionCode)
     competitionCode = compString.substring(0, 6)
     await createMiniCompetition(competitionCode)
+    
     
     window.location.href = '/TechFestTraining/startCompetition.html?compCode=' + competitionCode
   }
@@ -55,9 +57,9 @@ function App() {
         <button onClick={redirectToCompletedProblems}>View Completed Problems</button>
         <br />
         <br />
-        <button>View Profile</button>
+        {/* <button>View Profile</button>
         <br />
-        <br />
+        <br /> */}
         <button onClick={handleLogout}>Logout</button>
       </div>
     </div>

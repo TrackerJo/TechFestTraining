@@ -29,7 +29,7 @@ import { getStorage, ref,getDownloadURL } from "firebase/storage";
 
  let loggedIn = -1;
  let loggingIn = false
-    let user = null;
+let user = null;
 
  export async function getProblemFolders(){
     
